@@ -3,14 +3,14 @@ var printDescription = function (theText){
   var newNode = document.createElement('p');
   newNode.appendChild(document.createTextNode(theText));
   node.appendChild(newNode);
-}
+};
 
 var printOptions = function (someText){
   var node = document.getElementById('options');
   var newNode = document.createElement('p');
   newNode.appendChild(document.createTextNode(someText));
   node.appendChild(newNode);
-}
+};
 
 printOptions("Leo");
 
@@ -23,6 +23,7 @@ function room(roomnumber,north,west,east,south){
   this.west=west;
 }
 
+
 var room1=new room(1,6,0,2,0);
 var room2=new room(2,7,1,3,0);
 var room3=new room(3,8,2,4,0);
@@ -33,7 +34,6 @@ var room7=new room(7,12,6,0,2);
 var room8=new room(8,13,0,9,3);
 var room9=new room(9,14,8,10,0);
 var room10=new room(10,15,9,0,5);
-
 var room11=new room(11,16,0,12,0);
 var room12=new room(12,0,11,0,7);
 var room13=new room(13,0,0,14,8);
@@ -56,16 +56,16 @@ var room = 1;
 //checks what's going on in the game
 var checkState = function(option,room){
   var check = this.option;
-  if (check === 0)
+  if (check === 0){
     state = 2;
-  } else if (check === 99) {
+  } else if (check === 99){
     state = 3;
   } else {
     state = 1;
     room = check;
   }
   return state;
-}
+};
 
 //states:
 //0 = beginning
@@ -80,7 +80,7 @@ var describe = function(){
 
   printDescription("Rain");
 
-}
+};
 
 //options:
 //north
@@ -93,7 +93,7 @@ var playerOptions = function(){
   printOptions("Option 1: Go north");
 
 
-}
+};
 
 var GameLoop = function(){
   checkState(option,room);
