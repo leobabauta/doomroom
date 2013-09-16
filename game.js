@@ -60,6 +60,8 @@ var checkState = function(option,room){
     state = 2;
   } else if (check === 99){
     state = 3;
+  } else if (state === 0){
+    return;
   } else {
     state = 1;
     room = check;
@@ -77,9 +79,17 @@ var checkState = function(option,room){
 
 
 var describe = function(){
-
-  printDescription("Rain");
-
+  if (state === 0) {
+    printDescription("Beginning description");
+    state++;
+  } else if (state === 1) {
+    printDescription("Describe new room");
+  } else if (state === 2) {
+    printDescription("You hit a wall! Ouch.");
+  } else if (state === 3) {
+    printDescription("You win! Congratulations!");
+  }
+  return;
 };
 
 //options:
