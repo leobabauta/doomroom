@@ -104,24 +104,17 @@ var playerOptions = function(){
 
   printOptions("1: Go north | 2: Go South | 3: Goe East | 4: Go West");
   var getPlayerMovement = prompt("Which direction would you like to go?");
-  var playerMovement = 0;
   if (getplayerMovement === "1") {
-    room = roomList[room.north - 1];
+    printOptions("You go North.");
   }
   else if (getPlayerMovement === "2") {
-    room = roomList[room.south - 1];
-    state = 1;
+    printOptions("You go South.");
   }
   else if (getPlayerMovement === "3") {
-    room = roomList[room.east - 1];
-    state = 1;
+    printOptions("You go East.");
   }
   else if (getPlayerMovement === "4") {
-    room = roomList[room.west - 1];
-    state = 1;
-  }
-  else {
-    state = 2;
+    printOptions("You go West.");
   }
 }
 
@@ -132,4 +125,3 @@ var GameLoop = function(){
 };
 
 GameLoop();
-
