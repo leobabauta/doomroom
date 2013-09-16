@@ -53,11 +53,12 @@ var state = 0;
 
 //checks what's going on in the game
 var checkState = function(){
-
+  if (option === 1){
+    
   } else if (state === 1) {
     
   }
-
+  return;
 }
 
 //states
@@ -74,7 +75,15 @@ var describe = function(){
 
 }
 
+//options
+//1 = north
+//2 = west
+//3 = east
+//4 = south
+
 var playerOptions = function(){
+
+  printOptions("Option 1: Go north");
 
 
 }
