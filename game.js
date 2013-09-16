@@ -33,6 +33,7 @@ var room7=new room(7,12,0,2,6);
 var room8=new room(8,13,9,3,0);
 var room9=new room(9,14,10,0,8);
 var room10=new room(10,15,0,5,9);
+
 var room11=new room(11,16,0,12,0);
 var room12=new room(12,0,11,0,7);
 var room13=new room(13,0,0,14,8);
@@ -52,16 +53,16 @@ var room25=new room(25,0,24,0,0);
 var state = 0;
 
 //checks what's going on in the game
-var checkState = function(){
-  if (option === 1){
-    
+var checkState = function(option){
+  var check = this.option;
+    if (north === 0)
   } else if (state === 1) {
     
   }
   return;
 }
 
-//states
+//states:
 //0 = beginning
 //1 = valid direction, move to new room
 //2 = hit a wall
@@ -75,11 +76,11 @@ var describe = function(){
 
 }
 
-//options
-//1 = north
-//2 = west
-//3 = east
-//4 = south
+//options:
+//north
+//west
+//east
+//south
 
 var playerOptions = function(){
 
@@ -89,7 +90,7 @@ var playerOptions = function(){
 }
 
 var GameLoop = function(){
-  checkState();
+  checkState(option);
   describe();
   playerOptions();
 };
