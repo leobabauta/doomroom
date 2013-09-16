@@ -51,21 +51,27 @@ var room24=new room(24,0,0,25,19);
 var room25=new room(25,0,24,0,0);
 
 var state = 0;
+var room = 1;
 
 //checks what's going on in the game
-var checkState = function(option){
+var checkState = function(option,room){
   var check = this.option;
-    if (north === 0)
-  } else if (state === 1) {
-    
+  if (check === 0)
+    state = 2;
+  } else if (check === 99) {
+    state = 3;
+  } else {
+    state = 1;
+    room = check;
   }
-  return;
+  return state;
 }
 
 //states:
 //0 = beginning
 //1 = valid direction, move to new room
 //2 = hit a wall
+//3 = win!
 
 
 
@@ -90,7 +96,7 @@ var playerOptions = function(){
 }
 
 var GameLoop = function(){
-  checkState(option);
+  checkState(option,room);
   describe();
   playerOptions();
 };
