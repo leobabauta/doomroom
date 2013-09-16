@@ -23,16 +23,16 @@ function room(roomnumber,north,west,east,south){
   this.west=west;
 }
 
-var room1=new room(1,6,2,0,0);
-var room2=new room(2,7,3,0,1);
-var room3=new room(3,8,4,0,2);
-var room4=new room(4,0,5,0,3);
-var room5=new room(5,10,0,0,4);
-var room6=new room(6,0,7,1,0);
-var room7=new room(7,12,0,2,6);
-var room8=new room(8,13,9,3,0);
-var room9=new room(9,14,10,0,8);
-var room10=new room(10,15,0,5,9);
+var room1=new room(1,6,0,2,0);
+var room2=new room(2,7,1,3,0);
+var room3=new room(3,8,2,4,0);
+var room4=new room(4,0,3,5,0);
+var room5=new room(5,10,4,0,0);
+var room6=new room(6,0,0,7,1);
+var room7=new room(7,12,6,0,2);
+var room8=new room(8,13,0,9,3);
+var room9=new room(9,14,8,10,0);
+var room10=new room(10,15,9,0,5);
 
 var room11=new room(11,16,0,12,0);
 var room12=new room(12,0,11,0,7);
