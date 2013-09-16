@@ -1,8 +1,18 @@
+var printDescription = function (theText){
+  var node = document.getElementById('description');
+  var newNode = document.createElement('p');
+  newNode.appendChild(document.createTextNode(theText));
+  node.appendChild(newNode);
+}
 
-var node = document.getElementById('game');
-var newNode = document.createElement('p');
-newNode.appendChild(document.createTextNode('test'));
-node.appendChild(newNode);
+var printOptions = function (someText){
+  var node = document.getElementById('options');
+  var newNode = document.createElement('p');
+  newNode.appendChild(document.createTextNode(someText));
+  node.appendChild(newNode);
+}
+
+printOptions("Leo");
 
 //create room objects
 function room(roomnumber,north,west,east,south){
@@ -39,13 +49,11 @@ var room23=new room(23,0,22,0,0);
 var room24=new room(24,0,0,25,19);
 var room25=new room(25,0,24,0,0);
 
+var state = 0;
 
 //checks what's going on in the game
 var checkState = function(){
-  var state = 0;
-  if (state === 0) {
-    var node = document.getElementById('c');
-    node.innerHTML('<p>some dynamic html</p>');
+
   } else if (state === 1) {
     
   }
@@ -62,6 +70,7 @@ var checkState = function(){
 
 var describe = function(){
 
+  printDescription("Rain");
 
 }
 
